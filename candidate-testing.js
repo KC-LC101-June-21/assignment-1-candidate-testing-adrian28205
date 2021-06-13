@@ -26,29 +26,22 @@ for (i = 0; i < 5; i++ ){
 }
 //console.log(candidateAnswers);
 }
+
+
+
 function gradeQuiz(candidateAnswers) {
-
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-//if (candidateAnswer === "Sally Ride"){
-//  console.log("Correct!");
-//} else {
-//  console.log("Incorrect. The correct answer is Sally Ride.");
-//}
 console.log(`Candidate Name: ${candidateName}`);
-
 for (i=0; i < 5; i++){
-//console.log(`Your answer for question #${i+1} was ${candidateAnswers[i]}. The correct answer was ${correctAnswers[i]}.`);
 console.log(`${i+1}) ${questions[i]} 
 Your answer: ${candidateAnswers[i]} 
 Correct Answer: ${correctAnswers[i]}
 `);
 }
-
 let grade = 0;
 function sumCorrectAnswers(grade) {
    return grade += 1;
 }
-
 let j = 0
 while (j < 5) {
    if (candidateAnswers[j].toLowerCase() === correctAnswers[j].toLowerCase()) {
@@ -58,8 +51,6 @@ while (j < 5) {
      j++;
     }
 }
-console.log(grade / 5 * 100);
-
 if (grade >= 4) {
   console.log(`>>> Overall Grade: ${(grade / 5) * 100}% (${grade} of 5 responses correct) <<<
 >>> Status: PASSED <<<`);
@@ -67,6 +58,7 @@ if (grade >= 4) {
     console.log(`>>> Overall Grade: ${((grade / 5) * 100)}% (${grade} of 5 responses correct) <<<
 >>> Status: FAILED <<<`);
   }
+  return grade;
 }
 
 function runProgram() {
