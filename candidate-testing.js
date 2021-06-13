@@ -39,23 +39,26 @@ Correct Answer: ${correctAnswers[i]}
 `);
 }
 let grade = 0;
-function sumCorrectAnswers(grade) {
-   return grade += 1;
+let score = 0;
+function sumCorrectAnswers(score) {
+   return score += 1;
 }
 let j = 0
 while (j < 5) {
    if (candidateAnswers[j].toLowerCase() === correctAnswers[j].toLowerCase()) {
-   grade = sumCorrectAnswers(grade);
+   score = sumCorrectAnswers(score);
    j++;
   } else {
      j++;
     }
 }
-if (grade >= 4) {
-  console.log(`>>> Overall Grade: ${(grade / 5) * 100}% (${grade} of 5 responses correct) <<<
+grade = ((score / 5) * 100);
+
+if (grade >= 80) {
+  console.log(`>>> Overall Grade: ${grade}% (${score} of 5 responses correct) <<<
 >>> Status: PASSED <<<`);
 } else {
-    console.log(`>>> Overall Grade: ${((grade / 5) * 100)}% (${grade} of 5 responses correct) <<<
+    console.log(`>>> Overall Grade: ${grade}% (${score} of 5 responses correct) <<<
 >>> Status: FAILED <<<`);
   }
   return grade;
