@@ -58,7 +58,7 @@ while (j < 5) {
      j++;
     }
 }
-//console.log(grade);
+console.log(grade / 5 * 100);
 
 if (grade >= 4) {
   console.log(`>>> Overall Grade: ${(grade / 5) * 100}% (${grade} of 5 responses correct) <<<
